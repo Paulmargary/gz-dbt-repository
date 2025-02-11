@@ -1,36 +1,41 @@
-
 version: 2
 
-sources :
-  - name : raw
+sources:
+  - name: raw
     schema: gz_raw_data
+    description: "Dataset raw__date"
     tables:
       - name: product
         identifier: raw_gz_product
-        description: "model for product table"
+        description: "table product"
         columns:
-            - name: products_id
-              description: "The primary key for this table"
-              tests:
-                  - unique
-                  - not_null
-
+          - name: products_id
+            description: "ID des produits"
+          - name: purchase_price
+            description: "prix d'achat de chaque produit"
       - name: sales
         identifier: raw_gz_sales
-        description: "model for sales table"
+        description: "table sales"
         columns:
-            - name: orders_id
-              description: "The primary key for this table"
-              tests:
-                  - unique
-                  - not_null
-
+          - name: orders_id
+            description: "ID des commandes"
+          - name: date_date
+            description: "date de la commande"
+          - name: products_id
+            description: "ID des produits"
+          - name: revenue
+            description: "revenue par produit"
+          - name: quantity
+            description: "quantité de produits vendu dans la commande"
       - name: ship
         identifier: raw_gz_ship
-        description: "model for ship table"
-        columns: 
-             - name : orders_id
-               description : "The primary key for this table"
-               tests :
-                  - not null
-            
+        description: "table ship"
+        columns:
+          - name: orders_id
+            description: "ID des commandes"
+          - name: shipping_fee
+            description: "shipping_fee"
+          - name: logcost
+            description: "coût de la logistique"
+          - name: ship_cost
+            description: "coût de la livraison"
