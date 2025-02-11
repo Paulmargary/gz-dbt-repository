@@ -11,6 +11,9 @@ sources:
         columns:
           - name: products_id
             description: "ID des produits"
+            tests:
+              - not_null
+              - unique
           - name: purchase_price
             description: "prix d'achat de chaque produit"
       - name: sales
@@ -19,6 +22,9 @@ sources:
         columns:
           - name: orders_id
             description: "ID des commandes"
+            tests:
+              - not_null
+              - unique
           - name: date_date
             description: "date de la commande"
           - name: products_id
@@ -33,6 +39,9 @@ sources:
         columns:
           - name: orders_id
             description: "ID des commandes"
+            tests:
+              - unique
+              - not_null
           - name: shipping_fee
             description: "shipping_fee"
           - name: logcost
