@@ -2,11 +2,11 @@
 version: 2
 
 sources :
-  - name : gz_raw_data
+  - name : raw
     schema: gz_raw_data
     tables:
-      - name: raw_gz_product
-        identifier: product
+      - name: product
+        identifier: raw_gz_product
         description: "model for product table"
         columns:
             - name: products_id
@@ -15,8 +15,8 @@ sources :
                   - unique
                   - not_null
 
-      - name: raw_gz_sales
-        identifier: sales
+      - name: sales
+        identifier: raw_gz_sales
         description: "model for sales table"
         columns:
             - name: orders_id
@@ -25,8 +25,8 @@ sources :
                   - unique
                   - not_null
 
-      - name: raw_gz_ship
-        identifier: ship
+      - name: ship
+        identifier: raw_gz_ship
         description: "model for ship table"
         columns: 
              - name : orders_id
