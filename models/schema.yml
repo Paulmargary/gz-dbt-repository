@@ -19,12 +19,12 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: "table sales"
+        tests:
+          - unique:
+              column_name: "(orders_id|| '-' || products_id)"
         columns:
           - name: orders_id
             description: "ID des commandes"
-            tests:
-              - not_null
-              - unique
           - name: date_date
             description: "date de la commande"
           - name: products_id
