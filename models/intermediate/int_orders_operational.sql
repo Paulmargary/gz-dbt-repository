@@ -8,7 +8,7 @@ WITH nanana AS(
 
 SELECT orders_id
     ,date_date
-    ,ROUND(SUM(revenue))
+    ,ROUND(SUM(revenue)) as revenue
     ,ROUND(SUM(margin),2) as margin
     ,ROUND(SUM(shipping_fee),2) as shipping_fee
     ,ROUND(SUM(logcost),2) as logcost
