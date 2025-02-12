@@ -71,6 +71,9 @@ sources:
             description: "nombre d'impression"
           - name: click
             description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
       - name: bing
         identifier: raw_gz_bing
         columns:
@@ -88,6 +91,9 @@ sources:
             description: "nombre d'impression"
           - name: click
             description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
       - name: criteo
         identifier: raw_gz_criteo
         columns:
@@ -105,7 +111,9 @@ sources:
             description: "nombre d'impression"
           - name: click
             description: "nombre de click"
-      
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
       - name: facebook
         identifier: raw_gz_facebook
         columns:
@@ -123,3 +131,6 @@ sources:
             description: "nombre d'impression"
           - name: click
             description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
