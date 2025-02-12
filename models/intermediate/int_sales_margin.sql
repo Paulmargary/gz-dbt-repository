@@ -14,4 +14,3 @@ WITH nanana AS (
     ,ROUND((purchase_price * quantity),2) AS purchase_cost
   FROM nanana
   ORDER BY orders_id DESC
-
