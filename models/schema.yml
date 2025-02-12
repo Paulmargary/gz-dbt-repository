@@ -54,3 +54,83 @@ sources:
             description: "coût de la logistique"
           - name: ship_cost
             description: "coût de la livraison"
+      - name: adwords
+        identifier: raw_gz_adwords
+        columns:
+          - name: date_date
+            description: "date"
+          - name: paid_source
+            description: "source de paiement"
+          - name: campaign_key
+            description: "clé de campagne"
+          - name: camPGN_name
+            description: "nom de campagne"
+          - name: ads_cost
+            description: "coût de la pub"
+          - name: impression
+            description: "nombre d'impression"
+          - name: click
+            description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
+      - name: bing
+        identifier: raw_gz_bing
+        columns:
+          - name: date_date
+            description: "date"
+          - name: paid_source
+            description: "source de paiement"
+          - name: campaign_key
+            description: "clé de campagne"
+          - name: camPGN_name
+            description: "nom de campagne"
+          - name: ads_cost
+            description: "coût de la pub"
+          - name: impression
+            description: "nombre d'impression"
+          - name: click
+            description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
+      - name: criteo
+        identifier: raw_gz_criteo
+        columns:
+          - name: date_date
+            description: "date"
+          - name: paid_source
+            description: "source de paiement"
+          - name: campaign_key
+            description: "clé de campagne"
+          - name: camPGN_name
+            description: "nom de campagne"
+          - name: ads_cost
+            description: "coût de la pub"
+          - name: impression
+            description: "nombre d'impression"
+          - name: click
+            description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
+      - name: facebook
+        identifier: raw_gz_facebook
+        columns:
+          - name: date_date
+            description: "date"
+          - name: paid_source
+            description: "source de paiement"
+          - name: campaign_key
+            description: "clé de campagne"
+          - name: camPGN_name
+            description: "nom de campagne"
+          - name: ads_cost
+            description: "coût de la pub"
+          - name: impression
+            description: "nombre d'impression"
+          - name: click
+            description: "nombre de click"
+        tests:
+          - unique:
+              column_name: "(date_date|| '-' || campaign_key)"
