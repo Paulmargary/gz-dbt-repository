@@ -5,7 +5,7 @@ WITH nanana AS (
   join {{ ref("stg_raw__sales")}}
   USING (products_id)
 )
-
+, nenene AS (
   SELECT orders_id
     ,date_date
     ,revenue
@@ -14,3 +14,10 @@ WITH nanana AS (
     ,ROUND((purchase_price * quantity),2) AS purchase_cost
   FROM nanana
   ORDER BY orders_id DESC
+
+)
+
+SELECT *
+ ,{{ margin_percent( "revenue" , "purchase_cost" ) }} AS margin_percent
+FROM nenene
+ORDER BY orders_id DESC 
